@@ -1,35 +1,34 @@
-<nav class="  navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+<nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4 py-2">
+        <div class="flex justify-between items-center">
+            <a class="text-xl font-bold" href="#">Infinite Arcade</a>
+            <button class="block lg:hidden focus:outline-none">
+                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
+            <div class="hidden lg:flex flex-grow justify-end items-center">
+                <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+                    <li class="nav-item">
+                        <a class="px-4 py-2 block hover:text-blue-600" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="px-4 py-2 block hover:text-blue-600" href="#">Games</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="px-4 py-2 block hover:text-blue-600" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu hidden bg-white shadow-lg rounded mt-2">
+                            <a class="dropdown-item block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Action</a>
+                            <a class="dropdown-item block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item block px-4 py-2 text-gray-800 hover:bg-gray-200" href="#">Something else here</a>
+                        </div>
+                    </li>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+                </ul>
+                <form class="flex ml-4">
+                    <input class="border border-gray-300 rounded-md py-2 px-4 mr-2 focus:outline-none" type="search" placeholder="Search" aria-label="Search">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded focus:outline-none" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
     </div>
 </nav>

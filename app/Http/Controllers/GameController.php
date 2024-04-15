@@ -17,7 +17,7 @@ class GameController extends Controller
      */
     public function index()
     {
-        $response = Http::get('https://api.rawg.io/api/games?key=673d63746a2345afaaa2550d83565f32');
+        $response = Http::get('https://api.rawg.io/api/games?key=673d63746a2345afaaa2550d83565f32&page_size=10000');
 
         if($response->successful()) {
             $games = $response->json()['results'];
@@ -26,7 +26,7 @@ class GameController extends Controller
             //dd($games);
 
             $currentPage = LengthAwarePaginator::resolveCurrentPage();
-            $perPage = 10; // 10 jogos por página, você pode ajustar conforme necessário
+            $perPage = 10;
 
             $gamesCollection = collect($games);
             $currentPageGames = $gamesCollection->slice(($currentPage - 1) * $perPage, $perPage)->all();
