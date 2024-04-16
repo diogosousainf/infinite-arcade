@@ -10,6 +10,7 @@
             background-image: url('https://ideogram.ai/api/images/direct/K4rcKPa-SViGS7VwYLLRug.png');
             background-position: center top;
             position: relative;
+            height: 100vh;
         }
 
         .header-overlay {
@@ -65,14 +66,39 @@
         }
 
         .dropdown-item:hover {
-            background-color: #f9f9f9;
+            background-color: #f4843f;
         }
+
+        /* Footer */
+        footer {
+            background-color: #1f2937;
+            color: #cbd5e0;
+        }
+
+        .footer-links a {
+            color: #cbd5e0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-social a {
+            color: #cbd5e0;
+            transition: color 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            color: #ffffff;
+        }
+
     </style>
 </head>
 <body class="bg-gray-100">
 
 <!-- Navigation Bar -->
-<nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md">
+<nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md ">
     <div class="container mx-auto px-4 py-3">
         <div class="flex justify-between items-center">
             <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
@@ -151,10 +177,11 @@
     </div>
 </div>
 
+
 <!-- Features Section -->
 <div class="container mx-auto mt-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div class="bg-white p-8 rounded-lg shadow-md flex items-center">
+        <div class="bg-white p-8 rounded-lg shadow-md flex items-center ">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v1h2a1 1 0 011 1v2h2a1 1 0 011 1v4a1 1 0 01-1 1h-1v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-1H4a1 1 0 01-1-1V9a1 1 0 011-1h2V5a1 1 0 011-1h2V4a1 1 0 011-1zM6 7v10h8V7H6z" clip-rule="evenodd"/>
             </svg>
@@ -183,6 +210,52 @@
         </div>
     </div>
 </div>
+
+
+
+<!-- Categories Section -->
+    @component('components.category.cards.cards')
+    @endcomponent
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="py-12 mt-10">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- About Us -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">About Us</h3>
+                <p class="text-sm">Infinite Arcade is your ultimate destination for discovering and purchasing the latest and greatest games.</p>
+            </div>
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <!-- Social Links -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                <ul class="footer-social">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
 
 </body>
 </html>
