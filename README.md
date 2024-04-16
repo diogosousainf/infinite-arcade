@@ -1,5 +1,5 @@
 <p align="center"><img src="resources\imgs\an-immersive-and-vibrant-digital-illustration-of-a-K4rcKPa-SViGS7VwYLLRug-lIEHtNj1Rf2Rok0YxApzIQ.jpeg" width="400"></p>
-<h1>Infinite Arcade - Your Ultimate Game Store </h1>
+<h1 align="center">Infinite Arcade - Your Ultimate Game Store </h1>
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
