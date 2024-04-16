@@ -1,100 +1,188 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Arcade - Your Ultimate Game Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .header-bg {
+            background-image: url('https://ideogram.ai/api/images/direct/K4rcKPa-SViGS7VwYLLRug.png');
+            background-position: center top;
+            position: relative;
+        }
 
-        <title>Laravel</title>
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        .cta-btn {
+            background-color: #DB2777;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        .cta-btn:hover {
+            background-color: #BE185D;
+        }
 
-            .full-height {
-                height: 100vh;
-            }
+        /* Dropdown */
+        .dropdown {
+            position: relative;
+        }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            z-index: 999;
+            min-width: 160px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 8px 0;
+        }
 
-            .position-ref {
-                position: relative;
-            }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        .dropdown-item {
+            display: block;
+            padding: 8px 16px;
+            color: #333333;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
 
-            .content {
-                text-align: center;
-            }
+        .dropdown-item:hover {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+<!-- Navigation Bar -->
+<nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md">
+    <div class="container mx-auto px-4 py-3">
+        <div class="flex justify-between items-center">
+            <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
+                <svg class="h-10 w-10 fill-current mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.5 18.5L12 13 5.5 7.5z"/>
+                </svg>
+                Infinite Arcade
+            </a>
+            <div class="hidden md:flex items-center space-x-4 text-white">
+                <a href="/" class="flex items-center hover:text-gray-200 transition duration-300">
+                    <svg class="h-6 w-6 fill-current mr-1" viewBox="0 0 24 24">
+                        <path d="M3.5 18.5L10 13 3.5 7.5z"/>
+                    </svg>
+                    Home
+                </a>
+                <a href="#" class="flex items-center hover:text-gray-200 transition duration-300">
+                    <svg class="h-6 w-6 fill-current mr-1" viewBox="0 0 24 24">
+                        <path d="M3.5 18.5L10 13 3.5 7.5z"/>
+                    </svg>
+                    Shop
+                </a>
+                <a href="#" class="flex items-center hover:text-gray-200 transition duration-300">
+                    <svg class="h-6 w-6 fill-current mr-1" viewBox="0 0 24 24">
+                        <path d="M3.5 18.5L10 13 3.5 7.5z"/>
+                    </svg>
+                    About
+                </a>
+                <a href="#" class="flex items-center hover:text-gray-200 transition duration-300">
+                    <svg class="h-6 w-6 fill-current mr-1" viewBox="0 0 24 24">
+                        <path d="M3.5 18.5L10 13 3.5 7.5z"/>
+                    </svg>
+                    Contact
+                </a>
+                <div class="dropdown">
+                    <a href="#" class="hover:text-gray-200 transition duration-300 flex items-center">
+                        <svg class="h-6 w-6 fill-current mr-1" viewBox="0 0 24 24">
+                            <path d="M3.5 18.5L10 13 3.5 7.5z"/>
+                        </svg>
+                        <span>Account</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        @if (Auth::check())
+                            <div class="py-2 px-4 text-gray-800">Welcome, {{ Auth::user()->name }}</div>
+                            <a href="{{ route('profile-show') }}" class="dropdown-item">Profile</a>
+                            <a href="{{ route('logout') }}" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                @csrf
+                            </form>
+                        @else
+                            <a href="{{ route('login') }}" class="dropdown-item">Login</a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="dropdown-item">Register</a>
+                            @endif
                         @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    </div>
                 </div>
             </div>
+            <div class="md:hidden">
+                <button class="text-white hover:text-gray-200 focus:outline-none transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 fill-current" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-    </body>
+    </div>
+</nav>
+
+<!-- Header Section with Background Image -->
+<div class="header-bg bg-cover bg-center py-32 px-6 relative">
+    <div class="header-overlay"></div>
+    <div class="container mx-auto text-center relative z-10">
+        <h1 class="text-5xl font-bold text-white mb-6">Welcome to Infinite Arcade</h1>
+        <p class="text-xl text-white mb-8">Discover and buy the latest games with ease.</p>
+        <a href="/games" class="cta-btn inline-block">Explore Games</a>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container mx-auto mt-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div class="bg-white p-8 rounded-lg shadow-md flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v1h2a1 1 0 011 1v2h2a1 1 0 011 1v4a1 1 0 01-1 1h-1v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-1H4a1 1 0 01-1-1V9a1 1 0 011-1h2V5a1 1 0 011-1h2V4a1 1 0 011-1zM6 7v10h8V7H6z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Wide Selection</h2>
+                <p class="text-gray-700">Explore a vast library of games across all genres.</p>
+            </div>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-md flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 4a2 2 0 012-2h10a2 2 0 012 2v2a2 2 0 01-2 2h-1v6a2 2 0 01-2 2H8a2 2 0 01-2-2v-6H5a2 2 0 01-2-2V4zm3 8h8v4H6v-4zm2-6v2h4V6H8z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Secure Checkout</h2>
+                <p class="text-gray-700">Shop confidently with our secure payment system.</p>
+            </div>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-md flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v1h2a1 1 0 011 1v2h2a1 1 0 011 1v4a1 1 0 01-1 1h-1v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-1H4a1 1 0 01-1-1V9a1 1 0 011-1h2V5a1 1 0 011-1h2V4a1 1 0 011-1zM6 7v10h8V7H6z" clip-rule="evenodd"/>
+            </svg>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Instant Delivery</h2>
+                <p class="text-gray-700">Get instant access to your purchased games.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
 </html>

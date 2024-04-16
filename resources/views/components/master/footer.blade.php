@@ -1,10 +1,10 @@
-<!-- Footer -->
-<footer class="bg-light text-center text-lg-start">
-    <!-- Copyright -->
-    <div class="text-center p-3">
-        © 2024 Copyright:
-        <a>Diogo Sousa</a>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+<footer class="bg-gray-800 text-white bottom-0 w-full">
+    <div class="container mx-auto py-8">
+        <div class="text-center">
+            <p class="text-lg mb-4">© 2024 Infinite Arcade</p>
+            <p class="text-sm">Designed and developed by Diogo Sousa</p>
+        </div>
     </div>
-    <!-- Copyright -->
 </footer>
-<!-- Footer -->

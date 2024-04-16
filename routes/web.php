@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +24,9 @@ Auth::routes();
 
 Route::get('games',[GameController::class, 'index']) -> name('games.index');
 Route::resource('categories', 'CategoryController');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/profile', [App\Http\Controllers\UserController::class, 'show'])->middleware('auth')->name('profile-show');
+
 
 //673d63746a2345afaaa2550d83565f32
 //GET https://api.rawg.io/api/platforms?key=YOUR_API_KEY
