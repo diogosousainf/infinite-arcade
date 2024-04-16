@@ -1,3 +1,4 @@
+<p align="center"><img src="resources\imgs\an-immersive-and-vibrant-digital-illustration-of-a-K4rcKPa-SViGS7VwYLLRug-lIEHtNj1Rf2Rok0YxApzIQ.jpeg" width="400"></p>
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
