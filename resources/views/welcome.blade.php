@@ -10,7 +10,6 @@
             background-image: url('https://ideogram.ai/api/images/direct/K4rcKPa-SViGS7VwYLLRug.png');
             background-position: center top;
             position: relative;
-            height: 100vh;
         }
 
         .header-overlay {
@@ -99,7 +98,7 @@
 
 <!-- Navigation Bar -->
 <nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md ">
-    <div class="container mx-auto px-4 py-3">
+    <div class="container mx-auto px-4 py-10">
         <div class="flex justify-between items-center">
             <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
                 <svg class="h-10 w-10 fill-current mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

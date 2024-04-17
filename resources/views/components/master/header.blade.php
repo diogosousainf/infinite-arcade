@@ -37,14 +37,13 @@
 
 <!-- Navigation Bar -->
 <nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md">
-    <div class="container mx-auto px-4 py-3">
+    <div class="container mx-auto px-4 py-10">
         <div class="flex justify-between items-center">
             <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
-                <svg class="h-10 w-10 fill-current mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.5 18.5L12 13 5.5 7.5z"/>
-                </svg>
+                <img src="/resources/imgs/logo-removebg-preview.png" class="h-8 w-8 mr-2" >
                 Infinite Arcade
             </a>
+
             <div class="hidden md:flex items-center space-x-4 text-white">
                 <a href="/" class="flex items-center hover:text-gray-200 transition duration-300">
                     <svg class="h-6 w-6 fill-current mr-1" viewBox="0 0 24 24">
