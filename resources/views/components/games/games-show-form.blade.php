@@ -22,8 +22,25 @@
                 </div>
                 <div class="flex items-center">
                     <span class="text-gray-600 mr-2">Rating:</span>
-                    <span class="text-gray-800">{{ $gameDetails['rating'] }}</span>
+                    {{-- Converte rating para estrelas --}}
+                    @php
+                        $rating = round($gameDetails['rating']);
+                    @endphp
+                    @for($i = 0; $i < 5; $i++)
+                        @if($i < $rating)
+                            <svg class="h-6 w-6 fill-current text-yellow-400" viewBox="0 0 24 24">
+                                <path d="M12 2l2.121 6.485L20 9.636l-5.879 4.243L15.879 22 12 18.485 8.121 22l1.758-8.121L4 9.636l5.879-1.151z"/>
+                            </svg>
+                        @else
+                            <svg class="h-6 w-6 fill-current text-gray-400" viewBox="0 0 24 24">
+                                <path d="M12 2l2.121 6.485L20 9.636l-5.879 4.243L15.879 22 12 18.485 8.121 22l1.758-8.121L4 9.636l5.879-1.151z"/>
+                            </svg>
+                        @endif
+                    @endfor
+                    <span class="text-gray-800">{{ $rating }}</span>
                 </div>
+
+
                 <div class="mt-6">
                     <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md inline-block transition duration-300">Buy now</a>
 

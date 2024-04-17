@@ -3,6 +3,7 @@
     <div class="container mx-auto p-8 ">
         <div class="bg-white shadow-md rounded-md p-6">
             <h1 class="text-3xl font-bold mb-6">Explore Our Games</h1>
+            {}}
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 @foreach($games as $game)
                     <div class="relative bg-gray-100 rounded-md overflow-hidden shadow-md hover:shadow-lg transition duration-300 transform hover:-translate-y-1 hover:bg-gray-200">

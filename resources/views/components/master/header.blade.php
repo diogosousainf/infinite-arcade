@@ -40,8 +40,7 @@
     <div class="container mx-auto px-4 py-10">
         <div class="flex justify-between items-center">
             <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
-                <img src="resources/imgs/logo-removebg-preview.png" class="h-8 w-8 mr-2" >
-                Infinite Arcade
+                <img src="{{URL::asset('/images/logo-removebg-preview.png')}}" class="h-20 w-28 mr-2" >
             </a>
 
             <div class="hidden md:flex items-center space-x-4 text-white">

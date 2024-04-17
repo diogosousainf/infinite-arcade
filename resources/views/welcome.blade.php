@@ -116,13 +116,10 @@
 
 <!-- Navigation Bar -->
 <nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md fixed top-0 w-full z-10 bg-opacity-75 nav-shadow">
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-4 py-4">
         <div class="flex justify-between items-center">
             <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
-                <svg class="h-10 w-10 fill-current mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.5 18.5L12 13 5.5 7.5z"/>
-                </svg>
-                Infinite Arcade
+                <img src="{{URL::asset('/images/logo-removebg-preview.png')}}" class="h-27 w-40 mr-2" >
             </a>
             <div class="hidden md:flex items-center space-x-4 text-white">
                 <a href="/" class="flex items-center hover:text-gray-200 transition duration-300">
@@ -187,7 +184,7 @@
 <!-- Header Section with Background Image -->
 <div class="header-bg bg-cover bg-center py-32 px-6 relative">
     <div class="header-overlay"></div>
-    <div class="container mx-auto text-center relative z-10">
+    <div class="container mx-auto text-center relative ">
         <h1 class="text-5xl font-bold text-white mb-6">Welcome to Infinite Arcade</h1>
         <p class="text-xl text-white mb-8">Discover and buy the latest games with ease.</p>
         <a href="/games" class="cta-btn inline-block">Explore Games</a>
@@ -276,3 +273,5 @@
 
 </body>
 </html>
+
+
