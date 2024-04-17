@@ -40,7 +40,7 @@
     <div class="container mx-auto px-4 py-10">
         <div class="flex justify-between items-center">
             <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
-                <img src="/resources/imgs/logo-removebg-preview.png" class="h-8 w-8 mr-2" >
+                <img src="resources/imgs/logo-removebg-preview.png" class="h-8 w-8 mr-2" >
                 Infinite Arcade
             </a>
 
@@ -52,15 +52,15 @@
                     Home
                 </a>
 
-                <!-- Search Bar -->
-                <div class="flex items-center">
-                    <input type="text" placeholder="Search..." class="bg-gray-200 text-gray-800 px-3 py-1 rounded-md focus:outline-none">
-                    <button class="text-white ml-2 hover:text-gray-200 focus:outline-none transition duration-300">
+                <form action="{{ route('search') }}" method="GET" class="flex items-center">
+                    <input type="text" name="query" placeholder="Search..." class="bg-gray-200 text-gray-800 px-3 py-1 rounded-md focus:outline-none">
+                    <button type="submit" class="text-white ml-2 hover:text-gray-200 focus:outline-none transition duration-300">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-current" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                         </svg>
                     </button>
-                </div>
+                </form>
+
 
                 <div class="dropdown">
                     <a href="#" class="hover:text-gray-200 transition duration-300 flex items-center">

@@ -26,6 +26,8 @@ Route::get('games',[GameController::class, 'index']) -> name('games.index');
 Route::resource('categories', 'CategoryController');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile', [App\Http\Controllers\UserController::class, 'show'])->middleware('auth')->name('profile-show');
+Route::get('/search', 'GameController@search')->name('search');
+Route::get('/games/{id}', 'GameController@show')->name('games.show');
 
 
 //673d63746a2345afaaa2550d83565f32

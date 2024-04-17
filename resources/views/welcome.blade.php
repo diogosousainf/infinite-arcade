@@ -6,12 +6,30 @@
     <title>Infinite Arcade - Your Ultimate Game Store</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0; /* Adicionado para remover margens padrão */
+            padding: 0; /* Adicionado para remover preenchimento padrão */
+        }
+        .navbar {
+            position: fixed; /* Para fixar a navbar no topo da página */
+            top: 0; /* Para fixar a navbar no topo da página */
+            width: 100%;
+            z-index: 999; /* Para garantir que a navbar fique acima de todos os outros elementos */
+        }
         .header-bg {
             background-image: url('https://ideogram.ai/api/images/direct/K4rcKPa-SViGS7VwYLLRug.png');
-            background-position: center top;
-            position: relative;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative; /* Adicionado para criar um contexto de empilhamento para o elemento filho */
         }
-
         .header-overlay {
             position: absolute;
             top: 0;
@@ -20,7 +38,6 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
         }
-
         .cta-btn {
             background-color: #DB2777;
             color: white;
@@ -29,16 +46,13 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
-
         .cta-btn:hover {
             background-color: #BE185D;
         }
-
         /* Dropdown */
         .dropdown {
             position: relative;
         }
-
         .dropdown-menu {
             display: none;
             position: absolute;
@@ -51,11 +65,9 @@
             border-radius: 4px;
             padding: 8px 0;
         }
-
         .dropdown:hover .dropdown-menu {
             display: block;
         }
-
         .dropdown-item {
             display: block;
             padding: 8px 16px;
@@ -63,42 +75,48 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
-
         .dropdown-item:hover {
             background-color: #f4843f;
         }
-
+        /* Melhorias visuais na seção de recursos */
+        .feature-card {
+            background-color: #FFF;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
         /* Footer */
         footer {
             background-color: #1f2937;
             color: #cbd5e0;
         }
-
         .footer-links a {
             color: #cbd5e0;
             transition: color 0.3s ease;
         }
-
         .footer-links a:hover {
             color: #ffffff;
         }
-
         .footer-social a {
             color: #cbd5e0;
             transition: color 0.3s ease;
         }
-
         .footer-social a:hover {
             color: #ffffff;
         }
-
     </style>
+
 </head>
 <body class="bg-gray-100">
 
 <!-- Navigation Bar -->
-<nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md ">
-    <div class="container mx-auto px-4 py-10">
+<nav class="bg-gradient-to-r from-red-500 to-yellow-500 shadow-md fixed top-0 w-full z-10 bg-opacity-75 nav-shadow">
+    <div class="container mx-auto px-4 py-8">
         <div class="flex justify-between items-center">
             <a class="text-2xl font-bold text-white flex items-center transition duration-300 hover:text-gray-200" href="/">
                 <svg class="h-10 w-10 fill-current mr-2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -213,8 +231,8 @@
 
 
 <!-- Categories Section -->
-    @component('components.category.cards.cards')
-    @endcomponent
+@component('components.category.cards.cards')
+@endcomponent
 
 
 
