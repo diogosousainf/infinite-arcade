@@ -125,6 +125,22 @@ class GameController extends Controller
 
         $response = Http::get('https://api.rawg.io/api/games?key=673d63746a2345afaaa2550d83565f32&search='. urlencode($query)); // urlencode para tratar caracteres especiais
 
+
+
+
+        if ($response->successful()) {
+            $games = $response->json()['results'];
+
+            return view('pages.games.list', compact('games'));
+        } else {
+            return response()->json(['error' => 'Erro ao acessar a API Rawg'], 500);
+        }
+    }
+
+    public function byPlatform($platformName)
+    {
+        $response = Http::get("https://api.rawg.io/api/games?key=673d63746a2345afaaa2550d83565f32&platforms={$platformName}");
+
         if ($response->successful()) {
             $games = $response->json()['results'];
 

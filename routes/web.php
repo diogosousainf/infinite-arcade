@@ -28,6 +28,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/profile', [App\Http\Controllers\UserController::class, 'show'])->middleware('auth')->name('profile-show');
 Route::get('/search', 'GameController@search')->name('search');
 Route::get('/games/{id}', 'GameController@show')->name('games.show');
+Route::get('/games/platform/{platform}', 'GameController@byPlatform')->name('games.byPlatform');
+
 
 
 //673d63746a2345afaaa2550d83565f32
