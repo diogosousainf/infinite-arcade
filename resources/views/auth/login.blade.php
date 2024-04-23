@@ -18,21 +18,27 @@
         .min-h-screen {
             background-color: #4158D0;
             background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+        .cardlogin {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
-
+{{--}}<div class=" justify-center items-center">
+        <img class="h-30 w-40" src="{{ URL::asset('/images/logo-removebg-preview.png') }}" alt="Logo">
+    </div>{{--}}
 <div class="min-h-screen flex">
+    
     <div class="w-1/2 flex items-center justify-center">
-        <div class="max-w-md w-full bg-white rounded-lg shadow-lg overflow-hidden">
-            <div class="px-6 py-8">
-                <div class="flex justify-center items-center">
-                    <img class="h-16 w-16" src="{{ URL::asset('/images/logo-removebg-preview.png') }}" alt="Logo">
-                    <h2 class="text-3xl font-extrabold text-gray-900 ml-2">Login</h2>
-                </div>
+        <div class="max-w-md w-full  rounded-lg shadow-lg overflow-hidden">
+            <div class="px-6 py-8 cardlogin">
+
                 <form class="mt-8 space-y-6" method="POST" action="{{ route('login') }}">
                     @csrf
-                    <div class="rounded-md shadow-sm -space-y-px">
+                    <div class="rounded-md shadow-sm -space-y-px ">
                         <div>
                             <label for="email" class="sr-only">Email address</label>
                             <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Email address">
