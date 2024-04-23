@@ -1,55 +1,76 @@
-
-@extends('components.master.main')
-
-@section('content')
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .login-bg {
 
+        {{--}}background-image: url('{{ URL::asset('/images/gaming-arcade-Hzycgrf1Ta6LGhbkc4MEAg-9ZhMGwhaSNWi9flS1lPiTA.jpeg') }}');{{--}}
+            background-size: cover;
+            background-position: center;
+            background-image: url("https://images7.alphacoders.com/134/1343563.jpeg");
+        }
 
-    <div class="container mx-auto mt-8">
-        <div class="max-w-md mx-auto bg-white shadow-md rounded-xl px-8 py-6">
-            <div class="font-bold text-2xl mb-6 text-center">{{ __('Login') }}</div>
+        .min-h-screen {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    </style>
+</head>
+<body class="bg-gray-100">
 
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">{{ __('E-Mail Address') }}</label>
-                    <input id="email" type="email" class="form-input w-full @error('email') border-red-500 @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                    @error('email')
-                    <p class="text-red-500 text-xs italic">{{ $message }}</p>
-                    @enderror
+<div class="min-h-screen flex">
+    <div class="w-1/2 flex items-center justify-center">
+        <div class="max-w-md w-full bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="px-6 py-8">
+                <div class="flex justify-center items-center">
+                    <img class="h-16 w-16" src="{{ URL::asset('/images/logo-removebg-preview.png') }}" alt="Logo">
+                    <h2 class="text-3xl font-extrabold text-gray-900 ml-2">Login</h2>
                 </div>
+                <form class="mt-8 space-y-6" method="POST" action="{{ route('login') }}">
+                    @csrf
+                    <div class="rounded-md shadow-sm -space-y-px">
+                        <div>
+                            <label for="email" class="sr-only">Email address</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Email address">
+                        </div>
+                        <div>
+                            <label for="password" class="sr-only">Password</label>
+                            <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" placeholder="Password">
+                        </div>
+                    </div>
 
-                <div class="mb-4">
-                    <label for="password" class="block text-gray-700 text-sm font-bold mb-2">{{ __('Password') }}</label>
-                    <input id="password" type="password" class="form-input w-full @error('password') border-red-500 @enderror" name="password" required autocomplete="current-password">
+                    <div class="flex items-center justify-between mt-4">
+                        <div class="flex items-center">
+                            <input id="remember_me" name="remember" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                            <label for="remember_me" class="ml-2 block text-sm text-gray-900">
+                                Remember me
+                            </label>
+                        </div>
 
-                    @error('password')
-                    <p class="text-red-500 text-xs italic">{{ $message }}</p>
-                    @enderror
-                </div>
+                        @if (Route::has('password.request'))
+                            <div class="text-sm">
+                                <a href="{{ route('password.request') }}" class="font-medium text-blue-600 hover:text-blue-500">
+                                    Forgot your password?
+                                </a>
+                            </div>
+                        @endif
+                    </div>
 
-                <div class="mb-4">
-                    <input class="mr-2" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-                    <label class="text-sm text-gray-700" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
-                </div>
-
-                <div class="mb-4">
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        {{ __('Login') }}
-                    </button>
-
-                    @if (Route::has('password.request'))
-                        <a class="text-sm text-blue-500 hover:text-blue-700" href="{{ route('password.request') }}">
-                            {{ __('Forgot Your Password?') }}
-                        </a>
-                    @endif
-                </div>
-            </form>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Sign in
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-@endsection
+    <div class="w-1/2 login-bg"></div>
+</div>
+
+</body>
+</html>
