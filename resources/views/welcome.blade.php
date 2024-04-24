@@ -10,14 +10,14 @@
             font-family: 'Roboto', sans-serif;
             background-color: #f3f4f6;
             color: #333;
-            margin: 0; /* Adicionado para remover margens padrão */
-            padding: 0; /* Adicionado para remover preenchimento padrão */
+            margin: 0;
+            padding: 0;
         }
         .navbar {
-            position: fixed; /* Para fixar a navbar no topo da página */
-            top: 0; /* Para fixar a navbar no topo da página */
+            position: fixed;
+            top: 0;
             width: 100%;
-            z-index: 999; /* Para garantir que a navbar fique acima de todos os outros elementos */
+            z-index: 999;
         }
         .header-bg {
             background-image: url('https://ideogram.ai/api/images/direct/K4rcKPa-SViGS7VwYLLRug.png');
@@ -28,7 +28,7 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative; /* Adicionado para criar um contexto de empilhamento para o elemento filho */
+            position: relative;
         }
         .header-overlay {
             position: absolute;
@@ -109,8 +109,58 @@
         .footer-social a:hover {
             color: #ffffff;
         }
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0.9);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-20px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes slideInRight {
+            from {
+                transform: translateX(20px);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        .animated {
+            animation-duration: 0.8s;
+            animation-fill-mode: both;
+        }
+        .fadeInUp {
+            animation-name: fadeInUp;
+        }
+        .scaleIn {
+            animation-name: scaleIn;
+        }
+        .slideInLeft {
+            animation-name: slideInLeft;
+        }
+        .slideInRight {
+            animation-name: slideInRight;
+        }
     </style>
-
 </head>
 <body class="bg-gray-100">
 
@@ -184,18 +234,17 @@
 <!-- Header Section with Background Image -->
 <div class="header-bg bg-cover bg-center py-32 px-6 relative">
     <div class="header-overlay"></div>
-    <div class="container mx-auto text-center relative ">
+    <div class="container mx-auto text-center relative animated fadeInUp">
         <h1 class="text-5xl font-bold text-white mb-6">Welcome to Infinite Arcade</h1>
         <p class="text-xl text-white mb-8">Discover and buy the latest games with ease.</p>
         <a href="/games" class="cta-btn inline-block">Explore Games</a>
     </div>
 </div>
 
-
 <!-- Features Section -->
 <div class="container mx-auto mt-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-        <div class="bg-white p-8 rounded-lg shadow-md flex items-center ">
+        <div class="bg-white p-8 rounded-lg shadow-md flex items-center animated scaleIn">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v1h2a1 1 0 011 1v2h2a1 1 0 011 1v4a1 1 0 01-1 1h-1v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-1H4a1 1 0 01-1-1V9a1 1 0 011-1h2V5a1 1 0 011-1h2V4a1 1 0 011-1zM6 7v10h8V7H6z" clip-rule="evenodd"/>
             </svg>
@@ -204,7 +253,7 @@
                 <p class="text-gray-700">Explore a vast library of games across all genres.</p>
             </div>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-md flex items-center">
+        <div class="bg-white p-8 rounded-lg shadow-md flex items-center animated scaleIn">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M3 4a2 2 0 012-2h10a2 2 0 012 2v2a2 2 0 01-2 2h-1v6a2 2 0 01-2 2H8a2 2 0 01-2-2v-6H5a2 2 0 01-2-2V4zm3 8h8v4H6v-4zm2-6v2h4V6H8z" clip-rule="evenodd"/>
             </svg>
@@ -213,7 +262,7 @@
                 <p class="text-gray-700">Shop confidently with our secure payment system.</p>
             </div>
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-md flex items-center">
+        <div class="bg-white p-8 rounded-lg shadow-md flex items-center animated scaleIn">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500 mr-4" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v1h2a1 1 0 011 1v2h2a1 1 0 011 1v4a1 1 0 01-1 1h-1v1a1 1 0 01-1 1H6a1 1 0 01-1-1v-1H4a1 1 0 01-1-1V9a1 1 0 011-1h2V5a1 1 0 011-1h2V4a1 1 0 011-1zM6 7v10h8V7H6z" clip-rule="evenodd"/>
             </svg>
@@ -225,28 +274,21 @@
     </div>
 </div>
 
-
-
 <!-- Categories Section -->
 @component('components.category.cards.cards')
 @endcomponent
-
-
-
-
-
 
 <!-- Footer Section -->
 <footer class="py-12 mt-10">
     <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <!-- About Us -->
-            <div>
+            <div class="animated slideInLeft">
                 <h3 class="text-lg font-bold mb-4">About Us</h3>
                 <p class="text-sm">Infinite Arcade is your ultimate destination for discovering and purchasing the latest and greatest games.</p>
             </div>
             <!-- Quick Links -->
-            <div>
+            <div class="animated fadeInUp">
                 <h3 class="text-lg font-bold mb-4">Quick Links</h3>
                 <ul class="footer-links">
                     <li><a href="#">Home</a></li>
@@ -256,7 +298,7 @@
                 </ul>
             </div>
             <!-- Social Links -->
-            <div>
+            <div class="animated slideInRight">
                 <h3 class="text-lg font-bold mb-4">Follow Us</h3>
                 <ul class="footer-social">
                     <li><a href="#">Facebook</a></li>
@@ -269,9 +311,5 @@
     </div>
 </footer>
 
-
-
 </body>
 </html>
-
-
