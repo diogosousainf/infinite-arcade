@@ -1,10 +1,10 @@
 <p align="center"><img src="public/images/logo.png" width="400"></p>
 <h1 align="center">Infinite Arcade - Your Ultimate Game Store </h1>
-<p align="center"><img src="public/images/imagesreadme/1" width="400"></p>
-<p align="center"><img src="public/images/imagesreadme/2" width="400"></p>
-<p align="center"><img src="public/images/imagesreadme/3" width="400"></p>
-<p align="center"><img src="public/images/imagesreadme/4" width="400"></p>
-<p align="center"><img src="public/images/imagesreadme/5" width="400"></p>
+<p align="center"><img src="public/images/imagesreadme/1.png" width="400"></p>
+<p align="center"><img src="public/images/imagesreadme/2.png" width="400"></p>
+<p align="center"><img src="public/images/imagesreadme/3.png" width="400"></p>
+<p align="center"><img src="public/images/imagesreadme/4.png" width="400"></p>
+<p align="center"><img src="public/images/imagesreadme/5.png" width="400"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
