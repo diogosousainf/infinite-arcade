@@ -1,9 +1,19 @@
 <p align="center"><img src="public/images/logo.png" width="400"></p>
 <h1 align="center">Infinite Arcade - Your Ultimate Game Store </h1>
+
+<h1 align="center">Main page</h1>
 <p align="center"><img src="public/images/imagensreadme/1.png" width=""></p>
+
+<h1 align="center">Login page</h1>
 <p align="center"><img src="public/images/imagensreadme/2.png" width=""></p>
+
+<h1 align="center">List of games</h1>
 <p align="center"><img src="public/images/imagensreadme/3.png" width=""></p>
+
+<h1 align="center">Game search</h1>
 <p align="center"><img src="public/images/imagensreadme/4.png" width=""></p>
+
+<h1 align="center">Game details</h1>
 <p align="center"><img src="public/images/imagensreadme/5.png" width=""></p>
 
 <p align="center">
@@ -83,8 +93,4 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-- Image `1.png`: Main page.
-- Image `2.png`: Login page.
-- Image `3.png`: List of games.
-- Image `4.png`: Game search.
-- Image `5.png`: Game details.
+
