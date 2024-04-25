@@ -1,10 +1,10 @@
 <p align="center"><img src="public/images/logo.png" width="400"></p>
 <h1 align="center">Infinite Arcade - Your Ultimate Game Store </h1>
-<p align="center"><img src="public/images/imagensreadme/1.png" width="400"></p>
-<p align="center"><img src="public/images/imagensreadme/2.png" width="400"></p>
-<p align="center"><img src="public/images/imagensreadme/3.png" width="400"></p>
-<p align="center"><img src="public/images/imagensreadme/4.png" width="400"></p>
-<p align="center"><img src="public/images/imagensreadme/5.png" width="400"></p>
+<p align="center"><img src="public/images/imagensreadme/1.png" width=""></p>
+<p align="center"><img src="public/images/imagensreadme/2.png" width=""></p>
+<p align="center"><img src="public/images/imagensreadme/3.png" width=""></p>
+<p align="center"><img src="public/images/imagensreadme/4.png" width=""></p>
+<p align="center"><img src="public/images/imagensreadme/5.png" width=""></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
@@ -82,3 +82,9 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+- Image `1.png`: Main page.
+- Image `2.png`: Login page.
+- Image `3.png`: List of games.
+- Image `4.png`: Game search.
+- Image `5.png`: Game details.
