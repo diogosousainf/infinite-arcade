@@ -1,5 +1,21 @@
-<p align="center"><img src="resources\imgs\an-immersive-and-vibrant-digital-illustration-of-a-K4rcKPa-SViGS7VwYLLRug-lIEHtNj1Rf2Rok0YxApzIQ.jpeg" width="400"></p>
+<p align="center"><img src="public/images/logo.png" width="400"></p>
 <h1 align="center">Infinite Arcade - Your Ultimate Game Store </h1>
+
+<h1 align="center">Main page</h1>
+<p align="center"><img src="public/images/imagensreadme/1.png" width=""></p>
+
+<h1 align="center">Login page</h1>
+<p align="center"><img src="public/images/imagensreadme/2.png" width=""></p>
+
+<h1 align="center">List of games</h1>
+<p align="center"><img src="public/images/imagensreadme/3.png" width=""></p>
+
+<h1 align="center">Game search</h1>
+<p align="center"><img src="public/images/imagensreadme/4.png" width=""></p>
+
+<h1 align="center">Game details</h1>
+<p align="center"><img src="public/images/imagensreadme/5.png" width=""></p>
+
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
@@ -76,3 +92,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
